@@ -3,27 +3,26 @@ import PropTypes from 'prop-types';
 
 class TodayPlan extends React.Component{
   render(){
-    const name = this.props.name;
-    const{
-      boolValue,
-      numValue,
-      arrayValue,
-      objValue,
-      nodeValue,
-      funcValue,
+    const {
+      date,
+      todo,
+      num,
+      arr,
+      obj,
+      istrue,
     } = this.props;
 
+    const message = this.props.istrue ? "참" : "거짓"
     return(
     <div className="message-container">
-      <div>안녕하세요{name}</div>
+      <div>안녕하세요</div>
       <div>
-        <span>불리언값 : {boolValue}</span>
-        <span>불리언값 : {numValue}</span>
-        <span>불리언값 : {arrayValue}</span>
-        <span>불리언값 : {objValue}</span>
-        <span>불리언값 : {nodeValue}</span>
-        <span>불리언값 : {funcValue}</span>
-
+        <span>date : {date}</span><br/>
+        <span>todo : {todo}</span><br/>
+        <span>age : {num}</span><br/>
+        <span>array : {arr}</span><br/>
+        <span>obj : {obj.prop}</span><br/>
+        <span>istrue : {message}</span><br/>
       </div>
     </div>
 
@@ -32,13 +31,12 @@ class TodayPlan extends React.Component{
 }
 
 TodayPlan.propTypes={
-  name:PropTypes.string,
-  boolValue:PropTypes.bool,
-  numValue:PropTypes.number,
-  arrayValue:PropTypes.arrayOf(PropTypes.number),
-  objValue:PropTypes.object,
-  nodeValue:PropTypes.node,
-  funcValue:PropTypes.func,
+  date:PropTypes.string,
+  todo:PropTypes.string,
+  num:PropTypes.number,
+  arr:PropTypes.arrayOf(PropTypes.number),
+  obj:PropTypes.object,
+  istrue:PropTypes.bool,
 };
 
 export default TodayPlan;
