@@ -25,7 +25,8 @@ class TodayPlan extends React.Component{
         <span>istrue : {message}</span><br/>
       </div>
     </div>
-
+   
+   
     );
   }
 }
