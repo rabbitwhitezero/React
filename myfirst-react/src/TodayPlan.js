@@ -17,7 +17,7 @@ class TodayPlan extends React.Component{
     <div className="message-container">
       <div>안녕하세요</div>
       <div>
-        <span>date : {date}</span><br/>
+        <span>date(hello) : {date}</span><br/>
         <span>todo : {todo}</span><br/>
         <span>age : {num}</span><br/>
         <span>array : {arr}</span><br/>
